@@ -1,10 +1,68 @@
 ### Software Requirements Specification (SRS) for Basic Inventory Management System
 
-The **Basic Inventory Management System** is a simple console-based application designed to help small businesses or individual users manage their inventory. The system allows users to add, update, delete, and view inventory items efficiently, providing a streamlined process for managing stock levels and item information. The system is intended to be user-friendly and requires no prior experience in inventory management.
+**Inventory Management System Documentation**
 
-The system provides functionality for adding items to the inventory, where users input the item's name, quantity, and price per unit. Each item is stored in a dictionary structure, ensuring quick access and modification. In the event that a user attempts to add an item that already exists, the system prevents duplication by notifying the user. The **Update Item** functionality allows users to adjust the quantity and price of an existing item in the inventory, ensuring that stock levels and pricing are accurate and up to date.
+## Introduction
+The **Inventory Management System** is a Python-based application that helps manage stock efficiently. It allows users to add, update, delete, search, and export inventory records while providing alerts for low stock levels.
 
-For items that are no longer in stock or no longer needed, the **Delete Item** feature allows users to remove items from the inventory entirely. This ensures that the inventory remains clutter-free and reflects only the currently available items. The system also includes an option to **View Inventory**, which displays all the items, their quantities, and respective prices. This view gives users a clear snapshot of their current stock levels and overall inventory status.
+## Features
+1. **Add Items** – Insert new items into the inventory.
+2. **Update Items** – Modify existing item details.
+3. **Delete Items** – Remove items from inventory.
+4. **View Inventory** – Display all items with quantities, prices, and total values.
+5. **Search for Items** – Find specific items in the inventory.
+6. **Restock Alerts** – Notify users when item quantities fall below a defined threshold.
+7. **Calculate Total Inventory Value** – Compute the overall worth of stock.
+8. **Export to CSV** – Save inventory records to a CSV file.
 
-The system is designed with simplicity in mind, providing easy navigation through a menu interface. It operates without any additional dependencies or external databases, making it lightweight and accessible in any Python environment. The application is ideal for users who need a straightforward and efficient way to manage their inventory without the complexities of larger, more advanced systems.
+## Usage Guide
+
+### 1. **Adding an Item**
+- Users are prompted to enter an item name, quantity, and price per unit.
+- The system ensures duplicate items are not added.
+- The item is stored in the inventory dictionary.
+
+### 2. **Updating an Item**
+- Users can modify the quantity and price of an existing item.
+- The system checks for the item's existence before allowing updates.
+
+### 3. **Deleting an Item**
+- Users enter the item name to remove it from inventory.
+- The system verifies whether the item exists before deletion.
+
+### 4. **Viewing Inventory**
+- Displays all stored items, their quantities, unit prices, and total worth.
+- If inventory is empty, a notification is displayed.
+
+### 5. **Searching for an Item**
+- Allows users to find an item by name and view its details.
+- If the item is not found, a notification is provided.
+
+### 6. **Restock Alerts**
+- Items with a quantity less than or equal to 5 are flagged.
+- A list of such items is displayed.
+
+### 7. **Calculating Total Inventory Value**
+- Computes and displays the total monetary value of all stored items.
+
+### 8. **Exporting Inventory to CSV**
+- Saves inventory records to a CSV file with item name, quantity, price per unit, and total amount.
+- If the inventory is empty, an appropriate message is displayed.
+
+## Error Handling
+- **Invalid Inputs:** Ensures numerical values are entered for quantity and price.
+- **Item Existence Checks:** Prevents duplicate additions and ensures updates/deletions are valid.
+
+## Running the Application
+1. Run the script using
+   ```bash
+   python inventory.py
+   ```
+3. Follow the menu prompts to perform inventory operations.
+4. Exit the application by selecting option `9`.
+
+## Conclusion
+This system provides an easy-to-use solution for managing inventory efficiently, ensuring stock levels are maintained and properly recorded.
+
+
 (Open Source Project for Hacktoberfest2024)
